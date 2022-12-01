@@ -1,0 +1,10 @@
+Library/
+Builds/
+Obj/
+Logs/
+UserSettings/
+.idea/
+Assets/Firebase/Plugins/x86_64/
+Temp/
+Kingdom AIX_BurstDebugInformation_DoNotShip/
+kingdom_BurstDebugInformation_DoNotShip/
