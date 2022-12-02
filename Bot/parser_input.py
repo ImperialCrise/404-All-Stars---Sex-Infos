@@ -2,7 +2,7 @@ import re
 from data import question_reponse, matching_word
 
 def check_word(input, target):
-  input=input.split()
+  input=input.split("'")
   for word in input:
     if re.match(r'{0}*'.format(matching_word[target]), word.casefold()):
       return True

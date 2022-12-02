@@ -23,7 +23,7 @@ class TestParser(unittest.TestCase):
 
     def test_embrasser(self):
         expect = (question_reponse['embrasser'][0], question_reponse['embrasser'][1])
-        resultat = parser("Est-il risqué embrasser une personne seropositive ?")
+        resultat = parser("Est-il risqué d embrasser une personne seropositie ?")
         print(resultat[0], resultat[1])
       
         self.assertEqual(expect[0], resultat[0])
@@ -49,7 +49,7 @@ class TestParser(unittest.TestCase):
   
     def test_prevention(self):
         expect = (question_reponse['prevention'][0], question_reponse['prevention'][1])
-        resultat = parser("Qu’est-ce qu’une personne seropositive?")
+        resultat = parser("Qu est-ce qu une personne seropositive?")
         print(resultat[0], resultat[1])
       
         self.assertEqual(expect[0], resultat[0])
@@ -66,7 +66,7 @@ class TestParser(unittest.TestCase):
 
     def test_symptomes(self):
         expect = (question_reponse['symptomes'][0], question_reponse['symptomes'][1])
-        resultat = parser("J’ai des symptomes, alors j’ai le sida ?")
+        resultat = parser("J ai des symptomes, alors j ai le sida ?")
         print(resultat[0], resultat[1])
       
         self.assertEqual(expect[0], resultat[0])
@@ -74,7 +74,7 @@ class TestParser(unittest.TestCase):
 
     def test_attaque(self):
         expect = (question_reponse['attaque'][0], question_reponse['attaque'][1])
-        resultat = parser(" Dans l’organisme, à quoi attaque le VIH ?")
+        resultat = parser(" Dans l organisme, à quoi s attaque le VIH ?")
         print(resultat[0], resultat[1])
       
         self.assertEqual(expect[0], resultat[0])
@@ -82,7 +82,7 @@ class TestParser(unittest.TestCase):
 
     def test_question(self):
         expect = (question_reponse['question'][0], question_reponse['question'][1])
-        resultat = parser(" Pour toute question concernant le SIDA, j’appelle :")
+        resultat = parser(" Pour toute question concernant le SIDA, j appelle :")
         print(resultat[0], resultat[1])
       
         self.assertEqual(expect[0], resultat[0])
