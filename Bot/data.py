@@ -7,7 +7,7 @@ matching_word = {
   'sida':'sid',
   'seropositif' : 'sero',
   'embrasser' : 'embrasser',
-  'mère': 'mere',
+  'mere': 'mere',
   'parent':'pare',
   'enfant': 'enf',
   'bebe' : 'bebe',
