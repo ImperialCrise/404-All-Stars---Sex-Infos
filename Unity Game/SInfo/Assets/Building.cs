@@ -8,15 +8,12 @@ public class Building : MonoBehaviour
 {
     public CanvasGroup CanvasGroup;
 
-    [Header("Image Prefab Question:")] 
-    public GameObject Title;
-    
     [Header("Answers:")] 
-    public Question[] Questions;
+    public GameObject[] Questions;
 
     private int index = 0;
     private int length = 0;
-
+    public bool isClickable = false;
     
     void Start()
     {
@@ -26,17 +23,27 @@ public class Building : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        LeanTween.value(gameObject, f => CanvasGroup.alpha = f, 0f, 1f, 0.5f);
+        if (other.tag.Equals("Player"))
+        {
+            isClickable = true;
+            LeanTween.value(gameObject, f => CanvasGroup.alpha = f, 0f, 1f, 0.5f);
+        }
     }
 
-    public void OnTriggerExit2D(Collider other)
+    public void OnTriggerExit2D(Collider2D other)
     {
-        LeanTween.value(gameObject, f => CanvasGroup.alpha = f, 1f, 0f, 0.5f);
+        if (other.tag.Equals("Player"))
+        {
+            isClickable = false;
+            LeanTween.value(gameObject, f => CanvasGroup.alpha = f, 1f, 0f, 0.5f);
+        }
     }
 
     public void onClickOnButton()
     {
-        MenuSystem.Instance.showQuestion(Questions[Random.Range(0, length)]);
-        //index = (index + 1) % length;
+        if (isClickable)
+        {
+            MenuSystem.Instance.showQuestion(Questions[Random.Range(0, length)]);
+        }
     }
 }

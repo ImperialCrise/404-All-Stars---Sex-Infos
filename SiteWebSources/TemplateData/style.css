@@ -1,0 +1,104 @@
+body { padding: 0; margin: 0; background-color: rgb(44, 40, 44);}
+.container{
+    position: relative;
+    width : 100%;
+    height : 100vh;
+    overflow: hidden;
+}
+
+
+.bubbles
+{
+    position : relative;
+    display : flex;
+
+}
+.bubbles span{
+    position: relative;
+    width : 30px;
+    height: 30px;
+    background:rgb(219, 164, 164);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(229, 212, 212),
+    0 0 50px rgb(226, 119, 119),
+    0 0 100px rgb(226, 119, 119);
+    animation : animate 15s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background:rgb(113, 140, 213);
+    box-shadow: 0 0 0 10px rgb(161, 236, 182),
+    0 0 50px rgb(224, 145, 145),
+    0 0 100px rgb(227, 199, 199);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh)scale(0);
+    }
+    100%
+    {
+        transform : translateY(-10vh) scale(1);
+    }
+}
+#unity-container { position: absolute; }
+#unity-canvas{
+    border-radius: 30px;
+    outline: rgba(0, 64, 255, 0.484) 10px solid;
+}
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas {  }
+#unity-canvas:hover{
+    transition: 1s;
+    box-shadow: 0 -5px 40px 0 rgba(4, 128, 244, 0.995),0 17px 50px 0 rgb(0, 153, 255);
+}
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty {box-shadow: 0 -5px 40px 0 rgba(4, 124, 236, 0.995),0 17px 50px 0 rgb(0, 153, 255);
+width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+/*#unity-footer {border-radius: 30px; background-color: transparent;}*/
+.buttona{
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.unity-mobile #unity-footer { display: none ;background-color: transparent;}
+#unity-build-title { float: left; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button {float: right;overflow:hidden;padding: 40px; width: 1px; height: 1px; background-color: transparent; background: url('fullscreen.png') no-repeat center }
+#unity-fullscreen-button:hover{
+    overflow: hidden;
+    transform: scale(1.25) ;
+    transition: 0.5s;
+}
+#myButton{
+    float: left;
+    margin: 20px;
+    background-color: rgba(0, 0, 255, 0.358);
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 115, 187, 0.15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(171, 177, 228);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#myButton:hover {
+    box-shadow: rgb(46, 44, 187) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.25) ;
+  }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: rgb(254, 6, 6); padding: 10px; display: none }

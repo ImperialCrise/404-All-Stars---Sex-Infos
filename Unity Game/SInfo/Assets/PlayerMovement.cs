@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] public NavMeshAgent agent;
     [SerializeField] public Animator AnimatorCharacter;
-    
+
+    public GameObject MovePan;
     
     public Vector2 movementDirection;
     public float movementSpeed;
 
+    public GameObject actuel;
     public bool clicked = false;
     void Start()
     {
@@ -32,12 +35,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckMousePos()
     {
+        if (MenuSystem.Instance.isDefinedOpen || !IntroductionSystem.Instance.isFinished)
+        {
+            agent.ResetPath();
+            return;
+        }
+        
         if (Input.GetMouseButtonUp(0))
         {
             lastpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             lastpos.z = 0;
             Debug.Log($"New pos: {lastpos}");
             clicked = true;
+
+            if (actuel)
+                Destroy(actuel);
+            
+            actuel = Instantiate(MovePan, lastpos, Quaternion.identity);
         }
     }
     

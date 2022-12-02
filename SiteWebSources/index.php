@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link rel="stylesheet" href="style.css"> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500&display=swap" rel="stylesheet">
+      <script type="text/javascript" src="script.js"></script>
+      <title>404 StarsNight</title>
+      <link rel="icon" type="image/png" href="favicon.ico" />
+   </head>
+
+   <body>
+   <div id = "navbar" class = "navbar">
+    <section class="cursor">
+        <div class="background-one">
+            <div class="link-container">
+               <a class="link-one" href="#aware">INFORMATIONS</a>
+               
+            </div>
+         </div>
+         <div class="background-two link-container">
+            <a class="link-two" href="ind.html">JOUER</a>
+         </div>
+         <div class="background-three link-container">
+            <a class="link-three" href="#about-us">A PROPOS</a>
+         </div>
+    </section>
+   </div>
+   
+
+   <div id="play" class="play">
+   
+   </div>
+
+   <div id="aware" class="aware reveal">
+      <div name = "space"></div>
+      <div class="main reveal">
+
+         <div class="back-to-main reveal-1">
+            <a href="#navbar">&#x2190; Menu principal</a>
+         </div>
+         
+
+          <div class = "sub-part reveal-2">
+              <h1>SE SENSIBILISER</h1> 
+
+              <p>
+               "Aujourd’hui, grâce aux avancées des traitements, les
+               personnes atteintes du VIH sous trithérapie ne
+               développent plus le SIDA, ont une durée de vie et une
+               qualité de vie normale. Elles n’ont plus de risque de
+               contaminer leur(s) partenaire(s) tant qu’ils et elles
+               suivent leur traitement. Il existe également un
+               traitement préventif du VIH (la PrEP) et un traitement
+               d’urgence (le TPE) disponible aux services d’urgences
+               en cas de prise de risque involontaire.
+              </p>
+
+              <p>Pourtant, nous faisons toujours face à une population
+               générale qui manque cruellement d’information et d’
+               éducation à la sexualité, et particulièrement chez les
+               jeunes adultes débutant leur vie sexuelle. Tabous,
+               non-dits, manque de cours d’éducation sexuelle en
+               milieu scolaire et préjugés négatifs, sont autant de
+               facteurs qui peuvent empêcher l’information de circuler
+               et les personnes de s’épanouir."</p>
+          </div>
+
+         <br>
+         <div class = "sub-part reveal-3" id = "external-link">
+            <h1>POUR PLUS D'INFORMATIONS</h1>
+            <ul>
+               <li><a href="https://www.sida-info-service.org/" class="link-information">Informations concernant le SIDA</a></li>
+               <li><a href="https://www.sexualites-info-sante.fr/" class="link-information">Sexualités-info-santé</a></li>
+               <li><a href="https://www.hepatites-info-service.org/" class="link-information">Informations concernant les hepatites</a></li>
+               <li><a href="https://www.instagram.com/sida_info_service/?hl=fr" class="link-information">Instagram sida-info</a></li>
+            </ul>
+            
+
+         </div>
+            <div class="cards reveal">
+               <div class="card reveal-1">
+                     <img src="/Assets/Images/ist-img.jpeg" class="card-img" alt="">
+                     <p class="card-title">Comment diagnostiquer une IST ?</p>
+                     <p class="card-desc">Beaucoup de ces infections sexuellement transmissibles donnent des signes : des brûlures en urinant, des pertes vaginales, des boutons au niveau de la région des organes sexuels...</p>
+               </div>
+
+               <div class="card reveal-2">
+                  <img src="/Assets/Images/768xPRESO_SIDA.jpeg" class="card-img" alt="">
+                  <p class="card-title">Les préservatifs</p>
+                  <p class="card-desc">Le « petit bout de plastic » (dépendament de votre taille) permet toujours de se protéger du VIH mais aussi des IST ou encore des hépatites</p>
+               </div>
+               
+               <div class="card reveal-3">
+                  <img src="/Assets/Images/prep_768x384.jpeg" class="card-img" alt="">
+                  <p class="card-title">La PREP</p>
+                  <p class="card-desc">La PrEP est une stratégie de prévention du VIH. Elle consiste à prendre un médicament anti VIH de manière continue ou discontinue. Elle s’adresse aux personnes qui ne sont pas infectées par le VIH</p>
+               </div>
+            </div>
+
+      </div>
+      <div name = "space"></div>
+   </div>
+
+   <div id="about-us" class="about-us">
+      <div name = "space"></div>
+
+      <div class= "sub-about">
+         <p class="about-title">404-stars</p>
+         <p class="about-sub-title"><span style="color: #F0CAA3;">Chef :</span> Amory Marchal (il cherche une alternance, amory.marchal@epita.fr)</p>
+         <p class="about-sub-title"><span style="color: #F0CAA3;">Membres :</span> Guynoe Djoufaing, Matéo Boulanger, Samy Abou al tout, Emre Ulusoy</p>
+      </div>
+      <div class= "sub-about">
+         <p><span style="color: #F0CAA3;">En parler ça aide</span></p>
+         <a href="https://www.sida-info-service.org/en-parler-ca-aide/" class="link-information">sida-info-service.org</p>
+      
+      </div>
+      <div class= "sub-about"></div>
+
+      <div name = "space"></div>
+   </div>
+   </body>
+
+</html>
+
+
+

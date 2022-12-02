@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,14 +14,13 @@ public class AnswerItem : MonoBehaviour
     public Image Background;
 
     private bool isClicked = false;
-    
-    void Start()
-    {
-        
-    }
+    public bool isShowed = false;
 
     public void onClick()
     {
+        if (isShowed || isClicked)
+            return;
+        
         isClicked = true;
         MenuSystem.Instance.onClickOnAnswer();
     }
@@ -33,20 +33,26 @@ public class AnswerItem : MonoBehaviour
 
     public void ShowAnswer()
     {
+        isShowed = true;
         if (Answer.isRight)
         {
-            Background.color = Color.green;
+            Background.color = new Color(0.15f, 0.87f, 0.59f);
             if (isClicked)
             {
-                text.text += "\n bien joué frere";
+                int rand = Random.Range(2, 10);
+                MenuSystem.Instance.Change(rand);
+                text.text += "\n <color=yellow>Gagné ! +"+rand+"</color>";
             }
         }
         else
         {
-            Background.color = Color.red;
+            Background.color = new Color(1f, 0.41f, 0.33f);
+            int rand = Random.Range(-4, -1);
+            MenuSystem.Instance.Change(rand);
+            
             if (isClicked)
             {
-                text.text += "\n frere t nul";
+                text.text += "\n <color=yellow>Perdu ! "+rand+"</color>";
             }
         }
     }
